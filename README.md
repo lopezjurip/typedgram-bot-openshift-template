@@ -21,6 +21,8 @@ Once you are ready, create a Node app:
   * This will create your app on `https://APP_NAME-NAMESPACE.rhcloud.com`
 * `TELEGRAM_TOKEN`: Your token.
 
+Also, this will create a new directory called `APP_NAME` on the current directory.
+
 ```sh
 rhc app create APP_NAME nodejs-0.10 \
   -e TELEGRAM_TOKEN=TELEGRAM_TOKEN \
