@@ -31,13 +31,18 @@ rhc app create APP_NAME nodejs-0.10 \
   --from-code=https://github.com/mrpatiwi/typedgram-bot-openshift-template.git
 ```
 
+You can set or change any time the Telegram Token with:
+```sh
+rhc set-env TELEGRAM_TOKEN=TELEGRAM_TOKEN -a APP_NAME -n NAMESPACE
+```
+
 Let's set the deployment remote repository to OpenShift and name it `openshift`:
 ```sh
 $ cd APP_NAME
 $ git config --get remote.origin.url | xargs git remote add openshift
 ```
 
-Now to deploy an update it is easy as
+Now to deploy an update it is easy as:
 ```sh
 $ git push openshift master
 ```
