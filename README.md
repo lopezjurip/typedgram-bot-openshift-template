@@ -2,7 +2,7 @@
 
 Template repository to mount a Telegram Bot on Openshift servers written in Typescript
 
-## [Openshift](https://openshift.redhat.com) deployment for a new app
+## [Openshift](https://openshift.redhat.com) deployment
 
 Create an account and download **[rhc](https://developers.openshift.com/en/managing-client-tools.html)** gem. Make sure you have **Ruby** installed.
 
@@ -14,11 +14,12 @@ $ gem install rhc
 $ rhc setup
 ```
 
-Once you are ready, create a Node app:
+Once you are ready, use this template as seed:
 
 * `APP_NAME`: Name for your app.
 * `NAMESPACE`: You need a namespace in OpenShift
   * This will create your app on `https://APP_NAME-NAMESPACE.rhcloud.com`
+  * You can create a namespace with `rhc domain create NAMESPACE`
 * `TELEGRAM_TOKEN`: Your token.
 
 Also, this will create a new directory called `APP_NAME` on the current directory.
@@ -30,6 +31,24 @@ rhc app create APP_NAME nodejs-0.10 \
   --from-code=https://github.com/mrpatiwi/typedgram-bot-openshift-template.git
 ```
 
+Let's set the deployment remote repository to OpenShift and name it `openshift`:
+```sh
+$ cd APP_NAME
+$ git config --get remote.origin.url | xargs git remote add openshift
+```
+
+Now to deploy an update it is easy as
+```sh
+$ git push openshift master
+```
+
+Finally, let's set the `origin` remote to your personal repository:
+```sh
+$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+$ git push origin master
+```
+
+Where `USERNAME` is your git username and `REPOSITORY` is your bot's home repository.
 
 ## Local Development
 
