@@ -1,4 +1,4 @@
-# Typedgram Bot - Openshift template
+# [Typedgram Bot](https://github.com/mrpatiwi/typedgram-bot) - Openshift template [![Build Status](https://travis-ci.org/mrpatiwi/typedgram-bot-openshift-template.svg)](https://travis-ci.org/mrpatiwi/typedgram-bot-openshift-template)
 
 Template repository to mount a Telegram Bot on Openshift servers written in Typescript
 
