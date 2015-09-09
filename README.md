@@ -1,4 +1,5 @@
-# [Typedgram Bot](https://github.com/mrpatiwi/typedgram-bot) - Openshift template [![Build Status](https://travis-ci.org/mrpatiwi/typedgram-bot-openshift-template.svg)](https://travis-ci.org/mrpatiwi/typedgram-bot-openshift-template)
+# [Typedgram Bot](https://github.com/mrpatiwi/typedgram-bot) - Openshift template
+[![Build Status][ci-image]][ci-url] [![dependencies][dependencies-image]][dependencies-url]
 
 Template repository to mount a Telegram Bot on Openshift servers written in Typescript
 
@@ -83,3 +84,9 @@ $ export LOCAL_URL="SUBDOMAIN.ngrok.com"
 ```
 
 Now you should be able to start your bot with `npm start`.
+
+
+[ci-image]: https://travis-ci.org/mrpatiwi/typedgram-bot-openshift-template.svg
+[ci-url]: https://travis-ci.org/mrpatiwi/typedgram-bot-openshift-template
+[dependencies-image]: https://david-dm.org/mrpatiwi/typedgram-bot-openshift-template.svg
+[dependencies-url]: https://david-dm.org/mrpatiwi/typedgram-bot-openshift-template
