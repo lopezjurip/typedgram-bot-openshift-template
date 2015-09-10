@@ -1,6 +1,6 @@
 /// <reference path="../typings/tsd.d.ts"/>
 
-import {TelegramTypedBot as Bot, IServerOptions, TelegramEvent} from "typedgram-bot"
+import {TelegramTypedBot as Bot, IServerOptions, TelegramEvent} from 'typedgram-bot'
 
 const PORT = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT      // do not choose 443
 const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN                       // from @botfather
@@ -60,7 +60,7 @@ bot.onCommand('/help', msg => {
     })
     .then(bot.waitResponse(msg))
     .then(response => {
-        return bot.sendMessage(response.chat.id, "I'm sorry Dave, I'm afraid I can't do that", {
+        return bot.sendMessage(response.chat.id, `I'm sorry Dave, I'm afraid I can't do that`, {
             reply_to_message_id: response.message_id,
         })
     })

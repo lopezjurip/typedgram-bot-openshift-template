@@ -1,6 +1,6 @@
 {
   "name": "typedgram-bot-template",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Telegram bot template ready to deployment on OpenShift",
   "main": "server.js",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "bugs": "https://github.com/mrpatiwi/typedgram-bot-openshift-template/issues",
   "dependencies": {
-    "typedgram-bot": "^0.3.0"
+    "typedgram-bot": "^0.3.2"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
