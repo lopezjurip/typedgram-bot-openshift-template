@@ -19,11 +19,11 @@
   },
   "bugs": "https://github.com/mrpatiwi/typedgram-bot-openshift-template/issues",
   "dependencies": {
-    "typedgram-bot": "^0.3.2"
+    "typedgram-bot": "^0.3.6"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-typescript": "^2.8.2",
-    "typescript": "^1.5.3"
+    "typescript": "^1.6.0-beta"
   }
 }
