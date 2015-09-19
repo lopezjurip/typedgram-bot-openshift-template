@@ -47,6 +47,12 @@ bot.onMissingCommand(msg => {
     return bot.sendMessage(msg.chat.id, 'Action Not found, type /help.')
 })
 
+bot.onCommand('/version', msg => {
+    return bot.sendMessage(msg.chat.id, `
+        Node: ${process.version}
+    `)
+})
+
 bot.onCommand(['/hello', '/hi'], msg => {
     return bot.sendMessage(msg.chat.id, 'Hello world')
 })
